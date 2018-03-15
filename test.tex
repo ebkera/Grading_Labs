@@ -1,0 +1,462 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you give
+% someone the link to this page, they can edit at the same
+% time. See the help menu above for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+% ---
+\documentclass{article}
+
+% Packages
+% ---
+\usepackage{amsmath} % Advanced math typesetting
+\usepackage[utf8]{inputenc} % Unicode support (Umlauts etc.)
+\usepackage[UKenglish]{babel} % Change hyphenation rules
+\usepackage{hyperref} % Add a link to your document
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage[letterpaper, portrait , margin=1in]{geometry}
+\usepackage{braket}
+\usepackage{parskip}
+\usepackage{epstopdf}
+%\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\usepackage{multirow}
+
+
+% Main document
+% ---
+\begin{document}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\theenumii}{\Roman{enumii}}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+
+\newcommand{\slides}{
+1=1,
+2=2, 
+3=3,
+4=4, 
+5=5, 
+6=6, 
+7=7, 
+8=8, 
+9=9,
+10=10, 
+11=11, 
+12=12, 
+13=13, 
+14=14, 
+15=15, 
+16=16, 
+17=17, 
+18=18, 
+19=19,
+20=20,
+21=21, 
+22=22, 
+23=23, 
+24=24}
+
+\newcommand{\mycommand}[1] {
+\begin{table}[h]
+\centering
+\begin{tabular}{c}
+PHYS 142 - Computer based lab feedback form\\
+Lab Title: Diffraction\\
+Date: Tuesday April 25$^{th}$ Spring 2017\\\hline
+\end{tabular}
+\end{table}
+
+
+
+
+%\TextField[name=STnum,bordercolor={1 1 1},width=.3 in]{}
+
+\begin{Form}[]
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Station \#  & Checkout Initials & Names & Prelab \\\hline
+&   &  &\\
+\multirow{3}{*}{#1}& \multirow{3}{*}{$EK$} &\ChoiceMenu[name=#1Name1,combo=true,menulength=24,bordercolor={1 1 1},width=4 in]{}{
+Joseph Somerville=1,
+Megan Kelly=2, 
+Brandon Solares=3,
+Damian Castaneda=4, 
+Luis Ramirez=5, 
+Vincent Lazaro=6, 
+David Le=7, 
+Duy Do=8, 
+Alexis Estrada=9,
+Ryan McKeever=10, 
+Jake TerHark=11,  
+Karim Mostafa=12, 
+Enrique Sanchez=13, 
+Juan Escobedo=14, 
+Muhammad Zeekrya=15, 
+Adan Morales=16, 
+Jeet Patel=17, 
+Mohammed Zahra=18,
+Sebastian Szulakiewicz=19,
+Lukasz Dabros=20, 
+Erik Quinlan=21,
+Raj Shah=22,
+Angelo Stasinos=23, 
+Adrian Esquivel=24}
+&\ChoiceMenu[name=#1PreLab1,combo=true,menulength=11,bordercolor={1 1 1},width=.3 in]{}{
+10=1,
+1=2,
+2=3, 
+3=4,
+4=5, 
+5=6, 
+6=7, 
+7=8, 
+8=9, 
+9=10,
+0=11}\\
+
+
+& & \ChoiceMenu[name=#1Name2,combo=true,menulength=24,bordercolor={1 1 1},width=4 in]{}{
+Joseph Somerville=1,
+Megan Kelly=2, 
+Brandon Solares=3,
+Damian Castaneda=4, 
+Luis Ramirez=5, 
+Vincent Lazaro=6, 
+David Le=7, 
+Duy Do=8, 
+Alexis Estrada=9,
+Ryan McKeever=10, 
+Jake TerHark=11,  
+Karim Mostafa=12, 
+Enrique Sanchez=13, 
+Juan Escobedo=14, 
+Muhammad Zeekrya=15, 
+Adan Morales=16, 
+Jeet Patel=17, 
+Mohammed Zahra=18,
+Sebastian Szulakiewicz=19,
+Lukasz Dabros=20, 
+Erik Quinlan=21,
+Raj Shah=22,
+Angelo Stasinos=23, 
+Adrian Esquivel=24}
+&\ChoiceMenu[name=#1PreLab2,combo=true,menulength=11,bordercolor={1 1 1},width=.3 in]{}{
+10=1,
+1=2,
+2=3, 
+3=4,
+4=5, 
+5=6, 
+6=7, 
+7=8, 
+8=9, 
+9=10,
+0=11}\\
+
+&  & \ChoiceMenu[name=#1Name3,combo=true,menulength=24,bordercolor={1 1 1},width=4 in]{}{
+Joseph Somerville=1,
+Megan Kelly=2, 
+Brandon Solares=3,
+Damian Castaneda=4, 
+Luis Ramirez=5, 
+Vincent Lazaro=6, 
+David Le=7, 
+Duy Do=8, 
+Alexis Estrada=9,
+Ryan McKeever=10, 
+Jake TerHark=11,  
+Karim Mostafa=12, 
+Enrique Sanchez=13, 
+Juan Escobedo=14, 
+Muhammad Zeekrya=15, 
+Adan Morales=16, 
+Jeet Patel=17, 
+Mohammed Zahra=18,
+Sebastian Szulakiewicz=19,
+Lukasz Dabros=20, 
+Erik Quinlan=21,
+Raj Shah=22,
+Angelo Stasinos=23, 
+Adrian Esquivel=24}
+&\ChoiceMenu[name=#1PreLab3,combo=true,menulength=11,bordercolor={1 1 1},width=.3 in]{}{
+10=1,
+1=2,
+2=3, 
+3=4,
+4=5, 
+5=6, 
+6=7, 
+7=8, 
+8=9, 
+9=10,
+0=11}\\
+&   &  &\\\hline
+\end{tabular}
+\end{table}
+
+\end{Form}
+
+
+%\begin{table}[h!]
+%\centering
+%\begin{center}
+%\begin{tabular}{|c|c|}
+%\hline
+%Names  &Points for Pre Lab\\\hline
+%& \\
+%\TextField[name=#1Name1,width=5 in]{}&\TextField[name=PL1,width=.3 in]{}\\
+%\TextField[name=#1Name2,width=5 in]{}&\TextField[name=PL2,width=.3 in]{}\\
+%\TextField[name=#1Name3,width=5 in]{}&\TextField[name=PL3,width=.3 in]{}\\
+%&\\\hline
+%
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+Please find a breakdown of your grades. The table shows your grades according to the slide number of the experiment.
+
+\begin{Form}[]
+\begin{table}[h!]
+\centering
+\label{my-label}
+\begin{tabular}{|c|p{11.75 cm}|c|c|}
+\hline
+\multirow{2}{1cm}{ Page \# }& \multicolumn{1}{|c|}{\multirow{2}{*}{Description}}  & \multirow{2}{1.5 cm}{Points Awarded} & \multirow{2}{1 cm}{Full Points} \\
+   &  &  &\\\hline 
+   &&&\\[-1em]
+   
+   
+%____________________________________1_______________________________________
+
+\ChoiceMenu[name=#1SlideNos1,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms1,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  & \ChoiceMenu[name=#1Awarded1,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full1,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%____________________________________2_______________________________________
+
+\ChoiceMenu[name=#1SlideNos2,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms2,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  & \ChoiceMenu[name=#1Awarded2,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23}  
+
+&\ChoiceMenu[name=#1Full2,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%____________________________________3_______________________________________
+
+\ChoiceMenu[name=#1SlideNos3,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms3,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded3,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full3,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	
+%____________________________________4______________________________________
+
+\ChoiceMenu[name=#1SlideNos4,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms4,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded4,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full4,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%_____________________________________5______________________________________
+
+\ChoiceMenu[name=#1SlideNos5,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms5,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  &\ChoiceMenu[name=#1Awarded5,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23}  
+
+&\ChoiceMenu[name=#1Full5,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________6_________________________________________
+
+\ChoiceMenu[name=#1SlideNos6,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms6,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded6,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full6,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________7_________________________________________
+
+\ChoiceMenu[name=#1SlideNos7,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms7,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded7,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23}  
+
+&\ChoiceMenu[name=#1Full7,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________8_________________________________________
+
+\ChoiceMenu[name=#1SlideNos8,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms8,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded8,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full8,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________9_________________________________________
+
+\ChoiceMenu[name=#1SlideNos9,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms9,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded9,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full9,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________10_________________________________________
+
+\ChoiceMenu[name=#1SlideNos10,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms10,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded10,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full10,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________11_________________________________________
+
+\ChoiceMenu[name=#1SlideNos11,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms11,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded11,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23}  
+
+&\ChoiceMenu[name=#1Full11,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________12_________________________________________
+
+\ChoiceMenu[name=#1SlideNos12,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+&\ChoiceMenu[name=#1Coms12,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded12,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full12,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%_______________________________________________________________________________	%__________________________________13_________________________________________
+
+\ChoiceMenu[name=#1SlideNos13,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms13,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded13,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23}  
+
+&\ChoiceMenu[name=#1Full13,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________14_________________________________________
+
+\ChoiceMenu[name=#1SlideNos14,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms14,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded14,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full14,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________15_________________________________________
+
+\ChoiceMenu[name=#1SlideNos15,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms15,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded15,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full15,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________16_________________________________________
+
+\ChoiceMenu[name=#1SlideNos16,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms16,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded16,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full16,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________17_________________________________________
+
+\ChoiceMenu[name=#1SlideNos17,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms17,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded17,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full17,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________18_________________________________________
+
+\ChoiceMenu[name=#1SlideNos18,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms18,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded18,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full18,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________19_________________________________________
+
+\ChoiceMenu[name=#1SlideNos19,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms19,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2}  
+& \ChoiceMenu[name=#1Awarded19,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full19,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________	%__________________________________20_________________________________________
+
+\ChoiceMenu[name=#1SlideNos20,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{1=1,2=2, 3=3,4=4, 5=5, 6=6, 7=7, 8=8, 9=9,10=10, 11=11, 12=12, 13=13, 14=14, 15=15, 16=16, 17=17, 18=18, 19=19,20=20,21=21, 22=22, 23=23, 
+24=24}  
+
+&\ChoiceMenu[name=#1Coms20,combo=true,menulength=2,bordercolor={1 1 1}, width=4.67 in]{}{True=1,False=2} 
+& \ChoiceMenu[name=#1Awarded20,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} 
+
+&\ChoiceMenu[name=#1Full20,combo=true,menulength=24,bordercolor={1 1 1},width=.3 in]{}{0=0,1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10, 11=11, 12=12, 13=13, 14=14, 0.1=15, 0.2=16, 0.3=17, 0.4=18, 0.5=19, 0.6=20, 0.7=21, 0.8=22, 0.9=23} \\   &&&\\[-1em]\hline &&&\\[-1em]
+ 
+%___________________________________________________________________________
+%___________________________________________________________________________	
+
+\multicolumn{1}{|c}{\multirow{1}{*}{}}& \multicolumn{1}{c|}{\multirow{1}{*}{Total}} & \TextField[name= b18#1,bordercolor={1 1 1}, width=.3in]{} & 40 \\[-1em]
+&&&\\\hline\hline
+
+\end{tabular}
+\end{table}
+\end{Form}
+\clearpage
+}%End of newcommand
+
+
+\mycommand{1}
+\mycommand{2}
+\mycommand{3}
+\mycommand{4}
+\mycommand{5}
+\mycommand{6}
+\mycommand{7}
+\mycommand{8}
+\mycommand{9}
+\mycommand{10}
+\mycommand{11}
+\mycommand{12}
+
+
+
+
+\end{document}
